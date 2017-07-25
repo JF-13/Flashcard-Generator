@@ -4,17 +4,14 @@ function cloze(text, cloze) {
   } else {
     this.cloze = cloze;
     this.partial = text;
-    this.fullText = function() {
-      var full = this.partial.replace("...", this.cloze);
-      console.log(full);
-    };
+    this.fullText = this.partial.replace("...", this.cloze);
   }
 }
 
-// EXAMPLE
-// var fanta = new cloze('love is all you ...', 'need');
+//EXAMPLE
+// var fanta = new cloze('All you need is ...', 'love');
 // console.log(fanta.partial);
 // console.log(fanta.cloze);
-// fanta.fullText();
+// console.log(fanta.fullText);
 
 module.exports = cloze;
